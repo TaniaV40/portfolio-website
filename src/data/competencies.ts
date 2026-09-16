@@ -177,15 +177,16 @@ export const COMPETENCIES: Competency[] = [
   {
     id: 'prod-ideation-app',
     category: 'product',
-    title: 'Creative Plot & Ideation Web App',
-    description: 'Interactive plot structuring tool helping authors construct multi-arc story premises from scratch.',
-    suggestedProof: 'Screenshot of interface mid-use showing premise development.',
-    proofType: 'screenshot',
-    artefactName: 'Plot Structuring App',
-    tags: ['Web App', 'Creative Writing', 'UX Design'],
+    title: 'Story Starter: Creative Plot & Ideation Web App',
+    description: 'Interactive plot structuring and story starter web application helping authors construct multi-arc story premises from scratch.',
+    suggestedProof: 'Live web application demo & premise development interface.',
+    proofType: 'live_app',
+    artefactName: 'Story Starter Digital Product',
+    tags: ['Live Web App', 'Creative Writing', 'Next.js', 'Ideation AI'],
     proofDetails: {
-      summary: 'Guides creators through beat sheet creation, character motivation mapping, and conflict escalation.',
-      highlights: ['Interactive beat sheet builder', 'Theme & subplot tracker']
+      summary: 'Guides creators through beat sheet creation, story starter prompts, character motivation mapping, and conflict escalation.',
+      link: 'https://story-starter-sable.vercel.app/',
+      highlights: ['Interactive beat sheet & premise generator', 'Theme & subplot conflict tracker']
     }
   },
   {
