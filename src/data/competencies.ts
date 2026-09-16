@@ -191,6 +191,25 @@ export const COMPETENCIES: Competency[] = [
     }
   },
   {
+    id: 'prod-toolstack-tracker',
+    category: 'product',
+    title: 'OneToolAway: Tool Stack Tracker',
+    description: 'Web application for auditing, tracking, and optimizing software tool stacks, subscription overhead, and operational tool ROI.',
+    suggestedProof: 'Live web application demo & tool stack audit interface.',
+    proofType: 'live_app',
+    artefactName: 'OneToolAway Digital Product',
+    tags: ['Live Web App', 'Tool Stack Tracker', 'SaaS Audit', 'Operations'],
+    proofDetails: {
+      summary: 'Allows businesses and digital creators to catalogue software tools, track recurring costs, map integration dependencies, and eliminate stack redundancy.',
+      link: 'https://www.onetoolaway.com/toolstack_traker',
+      highlights: [
+        'Software subscription & renewal cost tracking',
+        'Integration mapping across GHL, n8n, Make, and custom APIs',
+        'Redundant software elimination & stack ROI scoring'
+      ]
+    }
+  },
+  {
     id: 'prod-biz-audit',
     category: 'product',
     title: 'Business Operations Audit & PDF Export Tool',
