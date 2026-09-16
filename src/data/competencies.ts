@@ -81,6 +81,7 @@ export const FEATURED_PRODUCTS: Competency[] = [
     tags: ['AI Product', 'Google Docs API', 'Next.js', 'LLM Generation'],
     proofDetails: {
       summary: 'Automates book blurb generation by taking rough story premises, character dynamics, and genre tropes, then generating polished back-cover copy with direct export to Google Docs.',
+      link: 'https://blurb-smith.vercel.app/',
       highlights: [
         'Direct multi-template export into formatted Google Docs',
         'Genre-tuned hook generation (Thriller, Romance, Sci-Fi, Non-Fiction)',

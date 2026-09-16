@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Competency, CATEGORY_LABELS } from '@/data/competencies';
-import { X, CheckCircle, ShieldCheck, Tag, Code2, Eye, FileText } from 'lucide-react';
+import { X, CheckCircle, ShieldCheck, Tag, Code2, Eye, FileText, ExternalLink } from 'lucide-react';
 
 interface ProofModalProps {
   competency: Competency | null;
@@ -115,16 +115,28 @@ export const ProofModal: React.FC<ProofModalProps> = ({ competency, onClose }) =
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-[#E2D9E6] bg-[#FAF8FB] flex items-center justify-between">
+        <div className="px-6 py-4 border-t border-[#E2D9E6] bg-[#FAF8FB] flex flex-wrap items-center justify-between gap-3">
           <span className="text-xs text-[#666666] flex items-center gap-1.5 font-medium">
             <FileText className="w-4 h-4 text-[#A27EAB]" /> Artefact: {competency.artefactName}
           </span>
-          <button
-            onClick={onClose}
-            className="px-5 py-2 rounded-lg bg-[#442B63] hover:bg-[#2D1847] text-white text-xs font-semibold transition-colors"
-          >
-            Close Viewer
-          </button>
+          <div className="flex items-center gap-2">
+            {competency.proofDetails?.link && (
+              <a
+                href={competency.proofDetails.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#A27EAB] to-[#E4BDDD] hover:opacity-95 text-[#1E0F35] text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
+              >
+                <span>Launch Live Product</span> <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+            <button
+              onClick={onClose}
+              className="px-4 py-2 rounded-lg bg-[#442B63] hover:bg-[#2D1847] text-white text-xs font-semibold transition-colors"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
