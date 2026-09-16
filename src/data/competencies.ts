@@ -94,21 +94,22 @@ export const FEATURED_PRODUCTS: Competency[] = [
   {
     id: 'seo-diagnostic-tool',
     category: 'product',
-    title: 'Local SEO & Google Business Diagnostic Tool',
-    description: 'Automated audit tool delivering instant localized SEO scoring, GBP breakdown, and actionable fix reports.',
-    suggestedProof: 'Screenshot of scored output & audit report UI.',
-    proofType: 'screen_recording',
-    artefactName: 'SEO Diagnostic System',
+    title: 'Sports Coaching Efficiency Diagnostic Tool',
+    description: 'Automated audit and scoring engine delivering instant operational diagnostic reports, venue efficiency scores, and actionable fix roadmaps.',
+    suggestedProof: 'Live diagnostic tool web application & scored audit report.',
+    proofType: 'live_app',
+    artefactName: 'Sports Coaching Diagnostic System',
     featured: true,
-    tags: ['Local SEO', 'Audit Tool', 'Scoring Engine', 'PDF Generation'],
+    tags: ['Live Diagnostic Tool', 'Sports Efficiency', 'Scoring Engine', 'Audit Report'],
     proofDetails: {
-      summary: 'Scans Google Business Profiles and local citation signals to generate structured diagnostic scores and prioritized remediation roadmaps for business owners.',
+      summary: 'Automated diagnostic application built to audit sports coaching operations, calculating efficiency scores across venue utilization, coach ratios, and revenue leakage.',
+      link: 'https://audit-sports-efficiency.co.uk/sport-coaching-diagnostic-tool',
       highlights: [
-        'Automated scoring rubric across 15+ local ranking factors',
-        'Instant PDF generation for lead-gen and client audits',
-        'Integration ready for CRM and lead-capture flows'
+        'Automated scoring rubric across key sports coaching operational metrics',
+        'Instant diagnostic breakdown & prioritized remediation roadmap',
+        'Direct lead-gen intake integration with CRM pipeline'
       ],
-      badgeText: 'Audit & Diagnostic Engine',
+      badgeText: 'Live Diagnostic Tool',
       imagePlaceholderBg: 'from-emerald-600 to-teal-900',
     }
   },
@@ -388,6 +389,7 @@ export const COMPETENCIES: Competency[] = [
     tags: ['Consultative Sales', 'Audit Strategy', 'Deal Closing'],
     proofDetails: {
       summary: 'Replaces generic pitch calls with concrete data-backed diagnostic findings that prove value before contract signing.',
+      link: 'https://audit-sports-efficiency.co.uk/sport-coaching-diagnostic-tool',
       highlights: ['Pre-call automated audit trigger', 'Quantified pain-point presentation']
     }
   },
