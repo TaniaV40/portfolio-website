@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Competency, FEATURED_PRODUCTS } from '@/data/competencies';
-import { ExternalLink, Sparkles, CheckCircle2, FileCode, Play, BarChart3 } from 'lucide-react';
+import { ExternalLink, Sparkles, CheckCircle2, FileCode, Play, BarChart3, Trophy } from 'lucide-react';
 
 interface FeaturedShowcaseProps {
   onSelectCompetency: (item: Competency) => void;
@@ -26,10 +26,11 @@ export const FeaturedShowcase: React.FC<FeaturedShowcaseProps> = ({ onSelectComp
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {FEATURED_PRODUCTS.map((product) => {
             const isBlurb = product.id === 'blurbsmith';
             const isSeo = product.id === 'seo-diagnostic-tool';
+            const isSports = product.id === 'sports-coaching-system';
 
             return (
               <div
@@ -44,6 +45,8 @@ export const FeaturedShowcase: React.FC<FeaturedShowcaseProps> = ({ onSelectComp
                       ? 'from-[#442B63] to-[#2D1847]'
                       : isSeo
                       ? 'from-[#2E5E4E] to-[#1E3E34]'
+                      : isSports
+                      ? 'from-[#1E0F35] via-[#442B63] to-[#2D1847]'
                       : 'from-[#6A4793] to-[#442B63]'
                   } flex flex-col items-center justify-center p-4 relative overflow-hidden shadow-inner`}
                 >
@@ -65,7 +68,16 @@ export const FeaturedShowcase: React.FC<FeaturedShowcaseProps> = ({ onSelectComp
                     </div>
                   )}
 
-                  {!isBlurb && !isSeo && (
+                  {isSports && (
+                    <div className="relative z-10 text-center text-white">
+                      <Trophy className="w-10 h-10 mx-auto text-[#E4BDDD] mb-2" />
+                      <span className="font-mono text-xs font-semibold bg-black/30 text-white px-3 py-1 rounded-full border border-white/20 backdrop-blur-sm">
+                        Multi-Venue Engine
+                      </span>
+                    </div>
+                  )}
+
+                  {!isBlurb && !isSeo && !isSports && (
                     <div className="relative z-10 text-center text-white">
                       <Play className="w-10 h-10 mx-auto text-[#E4BDDD] mb-2" />
                       <span className="font-mono text-xs font-semibold bg-black/30 text-white px-3 py-1 rounded-full border border-white/20 backdrop-blur-sm">

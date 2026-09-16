@@ -113,6 +113,28 @@ export const FEATURED_PRODUCTS: Competency[] = [
     }
   },
   {
+    id: 'sports-coaching-system',
+    category: 'product',
+    title: 'Enterprise Sports Coaching & Operations Platform',
+    description: 'Multi-venue coaching management system handling trainer allocation, session attendance, automated billing, and student skill analytics.',
+    suggestedProof: 'System architecture specification & white-labeled operational workflow diagram.',
+    proofType: 'framework_spec',
+    artefactName: 'Sports Coaching Platform Architecture',
+    featured: true,
+    tags: ['Multi-Venue SaaS', 'PWA / Mobile', 'Automated Billing', 'Operations Engine'],
+    proofDetails: {
+      summary: 'End-to-end white-labeled operational platform designed for multi-venue sports academies and coaching organizations, handling session scheduling, coach check-ins, automated parent billing, and performance tracking.',
+      highlights: [
+        'Multi-venue coach dispatch & automated schedule optimization',
+        'Mobile PWA attendance check-in with offline sync capabilities',
+        'Automated parent subscription billing & instant SMS notifications',
+        'Student skill progression tracking & analytics dashboard'
+      ],
+      badgeText: 'Flagship Platform System',
+      imagePlaceholderBg: 'from-[#442B63] to-[#1E0F35]',
+    }
+  },
+  {
     id: 'multi-agent-ops',
     category: 'operations',
     title: 'Multi-Agent Operations Architecture',
