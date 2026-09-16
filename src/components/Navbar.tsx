@@ -29,7 +29,9 @@ export const Navbar: React.FC = () => {
             <Layers className="w-4 h-4 text-[#A27EAB]" /> Competency Matrix
           </a>
           <a
-            href="#contact"
+            href="https://taniavorster.com/contact/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-lg bg-[#442B63] hover:bg-[#2D1847] text-white font-semibold text-xs tracking-wide uppercase shadow-md shadow-[#442B63]/20 transition-all flex items-center gap-2"
           >
             <Mail className="w-4 h-4 text-[#E4BDDD]" /> Get in Touch

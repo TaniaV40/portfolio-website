@@ -9,7 +9,7 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-gradient-to-r from-[#1E0F35] via-[#2D1847] to-[#442B63] border border-[#442B63] p-8 sm:p-12 relative overflow-hidden shadow-xl">
           <div className="relative z-10 max-w-2xl">
-            <span className="text-xs font-bold text-[#E4BDDD] uppercase tracking-wider block mb-2 flex items-center gap-1.5">
+            <span className="text-xs font-bold text-[#E4BDDD] uppercase tracking-wider mb-2 flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-[#E4BDDD]" /> Ready to Collaborate?
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -21,7 +21,9 @@ export const ContactSection: React.FC = () => {
 
             <div className="mt-8 flex flex-wrap gap-4 items-center">
               <a
-                href="mailto:tania@taniavorster.com"
+                href="https://taniavorster.com/contact/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#A27EAB] to-[#E4BDDD] hover:opacity-95 text-[#1E0F35] font-bold text-sm shadow-lg transition-all"
               >
                 <Mail className="w-4 h-4" /> Get in Touch <ArrowUpRight className="w-4 h-4" />
