@@ -37,13 +37,13 @@ export interface Competency {
 
 export const CATEGORY_LABELS: Record<CompetencyCategory, { title: string; subtitle: string; icon: string }> = {
   product: {
-    title: 'Product & AI Applications',
-    subtitle: 'AI-powered SaaS tools, PWAs, writing & editorial software built',
+    title: 'Business Apps & SaaS Platforms',
+    subtitle: 'Sports coaching management systems, PWAs, diagnostic engines & business tools built',
     icon: 'Cpu',
   },
   marketing: {
-    title: 'Marketing & Copywriting',
-    subtitle: 'Conversion copy, advertorials, CRM sequences & brand positioning',
+    title: 'Marketing & Conversion Copy',
+    subtitle: 'B2B sales pages, advertorials, CRM sequences & brand positioning',
     icon: 'Megaphone',
   },
   operations: {
@@ -62,33 +62,34 @@ export const CATEGORY_LABELS: Record<CompetencyCategory, { title: string; subtit
     icon: 'FileText',
   },
   prompts: {
-    title: 'Prompt Engineering',
-    subtitle: 'System prompts, diagnostic engines, character sheet generators & multimodal workflows',
+    title: 'Prompt Engineering & AI Schemas',
+    subtitle: 'System prompts, diagnostic engines, zero-shot JSON schemas & business workflows',
     icon: 'Terminal',
   },
 };
 
 export const FEATURED_PRODUCTS: Competency[] = [
   {
-    id: 'blurbsmith',
+    id: 'sports-coaching-system',
     category: 'product',
-    title: 'BlurbSmith: AI Book Blurb Generator',
-    description: 'SaaS application for generating high-converting book blurbs with direct Google Docs export.',
-    suggestedProof: 'Screen recording / live demo of rough input converted into finished blurb.',
-    proofType: 'live_app',
-    artefactName: 'BlurbSmith Digital Product',
+    title: 'ShoSoccer Sports Coaching Management System',
+    description: 'Star flagship sports coaching platform managing 780+ active members across multi-venue operations, trainer dispatch, automated parent billing, and student analytics.',
+    suggestedProof: 'System architecture specification & white-labeled operational workflow diagram.',
+    proofType: 'framework_spec',
+    artefactName: 'ShoSoccer Sports Coaching Platform',
     featured: true,
-    tags: ['AI Product', 'Google Docs API', 'Next.js', 'LLM Generation'],
+    tags: ['Flagship Web App', 'ShoSoccer Platform', 'Multi-Venue SaaS', 'Automated Billing', 'Coach Dispatch'],
     proofDetails: {
-      summary: 'Automates book blurb generation by taking rough story premises, character dynamics, and genre tropes, then generating polished back-cover copy with direct export to Google Docs.',
-      link: 'https://blurb-smith.vercel.app/',
+      summary: 'End-to-end operational web platform built for sports coaching academies, managing 780+ active members, multi-venue scheduling, trainer check-ins, automated parent subscription billing, and student progress tracking.',
       highlights: [
-        'Direct multi-template export into formatted Google Docs',
-        'Genre-tuned hook generation (Thriller, Romance, Sci-Fi, Non-Fiction)',
-        'Iterative tone controls and length adjusters'
+        'Scaled active membership from 26 to 780+ managed members automatically',
+        'Multi-venue coach dispatch & automated schedule optimization',
+        'Mobile PWA attendance check-in with offline sync capabilities',
+        'Automated parent subscription billing & instant SMS notifications',
+        'Student skill progression tracking & executive analytics dashboard'
       ],
-      badgeText: 'Live Digital Product',
-      imagePlaceholderBg: 'from-blue-600 to-indigo-900',
+      badgeText: '★ STAR FLAGSHIP APP',
+      imagePlaceholderBg: 'from-[#FF3B00] to-[#1E0F35]',
     }
   },
   {
@@ -100,9 +101,9 @@ export const FEATURED_PRODUCTS: Competency[] = [
     proofType: 'live_app',
     artefactName: 'Sports Coaching Diagnostic System',
     featured: true,
-    tags: ['Live Diagnostic Tool', 'Sports Efficiency', 'Scoring Engine', 'Audit Report'],
+    tags: ['Live Web App', 'Sports Efficiency', 'Scoring Engine', 'Audit Report'],
     proofDetails: {
-      summary: 'Automated diagnostic application built to audit sports coaching operations, calculating efficiency scores across venue utilization, coach ratios, and revenue leakage.',
+      summary: 'Automated diagnostic web application built to audit sports coaching operations, calculating efficiency scores across venue utilization, coach ratios, and revenue leakage.',
       link: 'https://audit-sports-efficiency.co.uk/sport-coaching-diagnostic-tool',
       highlights: [
         'Automated scoring rubric across key sports coaching operational metrics',
@@ -114,25 +115,25 @@ export const FEATURED_PRODUCTS: Competency[] = [
     }
   },
   {
-    id: 'sports-coaching-system',
+    id: 'prod-toolstack-tracker',
     category: 'product',
-    title: 'Enterprise Sports Coaching & Operations Platform',
-    description: 'Multi-venue coaching management system handling trainer allocation, session attendance, automated billing, and student skill analytics.',
-    suggestedProof: 'System architecture specification & white-labeled operational workflow diagram.',
-    proofType: 'framework_spec',
-    artefactName: 'Sports Coaching Platform Architecture',
+    title: 'OneToolAway: Tool Stack Tracker',
+    description: 'Web application for auditing, tracking, and optimizing software tool stacks, subscription overhead, and operational tool ROI.',
+    suggestedProof: 'Live web application demo & tool stack audit interface.',
+    proofType: 'live_app',
+    artefactName: 'OneToolAway Digital Product',
     featured: true,
-    tags: ['Multi-Venue SaaS', 'PWA / Mobile', 'Automated Billing', 'Operations Engine'],
+    tags: ['Live Web App', 'Tool Stack Tracker', 'SaaS Audit', 'Operations'],
     proofDetails: {
-      summary: 'End-to-end white-labeled operational platform designed for multi-venue sports academies and coaching organizations, handling session scheduling, coach check-ins, automated parent billing, and performance tracking.',
+      summary: 'Allows businesses and digital creators to catalogue software tools, track recurring costs, map integration dependencies, and eliminate stack redundancy.',
+      link: 'https://www.onetoolaway.com/toolstack_traker',
       highlights: [
-        'Multi-venue coach dispatch & automated schedule optimization',
-        'Mobile PWA attendance check-in with offline sync capabilities',
-        'Automated parent subscription billing & instant SMS notifications',
-        'Student skill progression tracking & analytics dashboard'
+        'Software subscription & renewal cost tracking',
+        'Integration mapping across GHL, n8n, Make, and custom APIs',
+        'Redundant software elimination & stack ROI scoring'
       ],
-      badgeText: 'Flagship Platform System',
-      imagePlaceholderBg: 'from-[#442B63] to-[#1E0F35]',
+      badgeText: 'Live Business App',
+      imagePlaceholderBg: 'from-blue-600 to-slate-900',
     }
   },
   {
@@ -162,51 +163,17 @@ export const COMPETENCIES: Competency[] = [
   ...FEATURED_PRODUCTS,
   // PRODUCT
   {
-    id: 'prod-voice-guide',
+    id: 'prod-event-pwa',
     category: 'product',
-    title: 'Editorial Voice & Tone Analysis Tool',
-    description: 'Generates bespoke author style guides from manuscript excerpts.',
-    suggestedProof: 'Redacted sample style guide side-by-side with original manuscript excerpt.',
-    proofType: 'redacted_document',
-    artefactName: 'Manuscript Style Guide Engine',
-    tags: ['Editorial AI', 'Style Analysis', 'NLP'],
+    title: 'Event & Venue Check-In Mobile PWA',
+    description: 'Progressive Web App featuring native camera capture, barcode scanning, and offline sync for sports venue managers.',
+    suggestedProof: 'Screen recording on mobile device demonstrating offline check-in.',
+    proofType: 'screen_recording',
+    artefactName: 'Mobile Event PWA',
+    tags: ['PWA', 'Offline First', 'Camera API', 'Venue Ops'],
     proofDetails: {
-      summary: 'Analyzes writing syntax, pacing, vocabulary complexity, and tone markers to generate a comprehensive style guide.',
-      highlights: ['Syntax & vocabulary density mapping', 'Author voice preservation rulebook']
-    }
-  },
-  {
-    id: 'prod-ideation-app',
-    category: 'product',
-    title: 'Story Starter: Creative Plot & Ideation Web App',
-    description: 'Interactive plot structuring and story starter web application helping authors construct multi-arc story premises from scratch.',
-    suggestedProof: 'Live web application demo & premise development interface.',
-    proofType: 'live_app',
-    artefactName: 'Story Starter Digital Product',
-    tags: ['Live Web App', 'Creative Writing', 'Next.js', 'Ideation AI'],
-    proofDetails: {
-      summary: 'Guides creators through beat sheet creation, story starter prompts, character motivation mapping, and conflict escalation.',
-      link: 'https://story-starter-sable.vercel.app/',
-      highlights: ['Interactive beat sheet & premise generator', 'Theme & subplot conflict tracker']
-    }
-  },
-  {
-    id: 'prod-toolstack-tracker',
-    category: 'product',
-    title: 'OneToolAway: Tool Stack Tracker',
-    description: 'Web application for auditing, tracking, and optimizing software tool stacks, subscription overhead, and operational tool ROI.',
-    suggestedProof: 'Live web application demo & tool stack audit interface.',
-    proofType: 'live_app',
-    artefactName: 'OneToolAway Digital Product',
-    tags: ['Live Web App', 'Tool Stack Tracker', 'SaaS Audit', 'Operations'],
-    proofDetails: {
-      summary: 'Allows businesses and digital creators to catalogue software tools, track recurring costs, map integration dependencies, and eliminate stack redundancy.',
-      link: 'https://www.onetoolaway.com/toolstack_traker',
-      highlights: [
-        'Software subscription & renewal cost tracking',
-        'Integration mapping across GHL, n8n, Make, and custom APIs',
-        'Redundant software elimination & stack ROI scoring'
-      ]
+      summary: 'Allows coaching staff and venue managers to check in attendees seamlessly even in zero-connectivity venues, syncing once reconnected.',
+      highlights: ['IndexedDB local cache', 'Instant camera QR/barcode scanner']
     }
   },
   {
@@ -226,65 +193,23 @@ export const COMPETENCIES: Competency[] = [
   {
     id: 'prod-affiliate-scoring',
     category: 'product',
-    title: 'Affiliate Product Scoring Framework',
-    description: 'Algorithmic methodology for objective product evaluation and recommendation scoring.',
+    title: 'Product Evaluation & Scoring Framework',
+    description: 'Algorithmic methodology for objective business tool evaluation and recommendation scoring.',
     suggestedProof: 'Scoring rubric framework document.',
     proofType: 'framework_spec',
     artefactName: 'Product Evaluation Rubric',
-    tags: ['Methodology', 'Scoring Model', 'E-Commerce'],
+    tags: ['Methodology', 'Scoring Model', 'Business Systems'],
     proofDetails: {
-      summary: 'A multi-weighted scoring rubric evaluating merchant authority, buyer satisfaction, commission tier, and feature utility.',
-      highlights: ['Objective feature-weighting formula', 'Conversion likelihood metric']
-    }
-  },
-  {
-    id: 'prod-mindmap-app',
-    category: 'product',
-    title: 'Story Planning & Mind-Map Application',
-    description: 'Visual node-based interface for mapping complex multi-character narratives.',
-    suggestedProof: 'Screenshot of populated node graph and story connection canvas.',
-    proofType: 'screenshot',
-    artefactName: 'Interactive Narrative Canvas',
-    tags: ['Visual Canvas', 'Mind Mapping', 'Data Viz'],
-    proofDetails: {
-      summary: 'Enables writers to visualize character relationships, timeline overlaps, and worldbuilding lore.',
-      highlights: ['Node-graph canvas rendering', 'Timeline filter overlay']
-    }
-  },
-  {
-    id: 'prod-video-mockup',
-    category: 'product',
-    title: 'Book Marketing Video Mockup Generator',
-    description: 'Automated video rendering tool creating promotional teasers for novel launches.',
-    suggestedProof: 'Sample video output / animated GIF demonstration.',
-    proofType: 'screen_recording',
-    artefactName: 'Video Teaser Generator',
-    tags: ['Video Rendering', 'Book Marketing', 'Creative Automation'],
-    proofDetails: {
-      summary: 'Transforms cover artwork and blurb hooks into dynamic 15-second social media video clips.',
-      highlights: ['Kinetic typography presets', 'Automated aspect ratio exports (9:16, 16:9)']
-    }
-  },
-  {
-    id: 'prod-event-pwa',
-    category: 'product',
-    title: 'Event Management PWA with Offline Mode',
-    description: 'Progressive Web App featuring native camera capture, barcode scanning, and offline sync.',
-    suggestedProof: 'Screen recording on mobile device demonstrating offline check-in.',
-    proofType: 'screen_recording',
-    artefactName: 'Mobile Event PWA',
-    tags: ['PWA', 'Offline First', 'Camera API'],
-    proofDetails: {
-      summary: 'Allows event staff to check in attendees seamlessly even in zero-connectivity venues, syncing once reconnected.',
-      highlights: ['IndexedDB local cache', 'Instant camera QR/barcode scanner']
+      summary: 'A multi-weighted scoring rubric evaluating software reliability, user satisfaction, pricing efficiency, and feature utility.',
+      highlights: ['Objective feature-weighting formula', 'ROI evaluation metric']
     }
   },
 
-  // MARKETING
+  // MARKETING & COPYWRITING
   {
     id: 'mkt-landing-pages',
     category: 'marketing',
-    title: 'High-Converting Sales Pages & Advertorials',
+    title: 'High-Converting B2B Sales Pages & Advertorials',
     description: 'Direct-response copywriting for landing pages, advertorials, and lead acquisition.',
     suggestedProof: 'Before/after brief and hero section copy layout.',
     proofType: 'redacted_document',
@@ -349,20 +274,6 @@ export const COMPETENCIES: Competency[] = [
     proofDetails: {
       summary: 'Dual-column script formatting pairing spoken dialogue with visual B-roll cues and text overlays.',
       highlights: ['Attention-grabbing 3-second hooks', 'Logical slide-by-slide pitch deck flow']
-    }
-  },
-  {
-    id: 'mkt-brand-voice',
-    category: 'marketing',
-    title: 'Brand Voice & Tone System Design',
-    description: 'Comprehensive brand guidelines establishing linguistic rules, anti-patterns, and audience framing.',
-    suggestedProof: 'Brand Voice Specification Document.',
-    proofType: 'framework_spec',
-    artefactName: 'Brand Voice Playbook',
-    tags: ['Branding', 'Voice & Tone', 'Guidelines'],
-    proofDetails: {
-      summary: 'Establishes clear rules for how a brand speaks across social, customer support, and sales channels.',
-      highlights: ['"We Say / We Don\'t Say" tables', 'Tone calibration matrix by channel']
     }
   },
 
@@ -446,7 +357,7 @@ export const COMPETENCIES: Competency[] = [
     id: 'strat-sop-docs',
     category: 'strategy',
     title: 'Standard Operating Procedures (SOP) System',
-    description: 'Modular documentation hub standardizing operations across editorial and development teams.',
+    description: 'Modular documentation hub standardizing operations across business teams.',
     suggestedProof: 'Formatted SOP document excerpt.',
     proofType: 'redacted_document',
     artefactName: 'SOP Documentation Hub',
@@ -470,27 +381,13 @@ export const COMPETENCIES: Competency[] = [
     proofDetails: {
       summary: 'Demonstrates advanced prompt engineering techniques including XML sectioning, chain-of-thought prompting, and strict JSON output guarantees.',
       sampleText: `<system_instruction>
-You are an expert Local SEO Auditor.
-Analyze the provided business profile data. Output MUST adhere strictly to the JSON schema provided below.
-Step 1: Evaluate citation consistency score (0-100).
-Step 2: Identify top 3 critical NAP (Name, Address, Phone) errors.
+You are an expert Operations & Diagnostic Auditor.
+Analyze the provided business data. Output MUST adhere strictly to the JSON schema provided below.
+Step 1: Evaluate venue efficiency score (0-100).
+Step 2: Identify top 3 critical operational bottlenecks.
 Step 3: Generate actionable 30-day remediation bullet points.
 </system_instruction>`,
       highlights: ['Zero-shot JSON output compliance', 'Chain-of-Thought reasoning steps']
-    }
-  },
-  {
-    id: 'prompt-character-system',
-    category: 'prompts',
-    title: 'Character Development & Narrative Prompt Framework',
-    description: 'System prompt producing deeply textured fictional character bibles and dialogue samples.',
-    suggestedProof: 'Prompt framework & generated character sheet worked example.',
-    proofType: 'prompt_spec',
-    artefactName: 'Character Bible Prompt Engine',
-    tags: ['Creative Prompts', 'Character Bibles', 'Worldbuilding'],
-    proofDetails: {
-      summary: 'Prompts designed to extract psychological flaws, core desires, dialogue cadence, and character arcs.',
-      highlights: ['Dialogue tone consistency locks', 'Character flaw & motivation matrix']
     }
   }
 ];

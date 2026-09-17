@@ -16,16 +16,16 @@ import {
   Workflow,
   ShieldCheck,
   CheckCircle2,
-  BookOpen,
   SlidersHorizontal,
+  Star,
 } from 'lucide-react';
 
 export default function Home() {
   const [selectedCompetency, setSelectedCompetency] = useState<Competency | null>(null);
-  const [activeTrack, setActiveTrack] = useState<'all' | 'ops' | 'author'>('all');
+  const [activeTrack, setActiveTrack] = useState<'all' | 'ops' | 'apps'>('all');
   const [activeAccordion, setActiveAccordion] = useState<number | null>(0);
 
-  // Categorize competencies into Dual Tracks
+  // Categorize competencies into Business Tracks
   const filteredCompetencies = useMemo(() => {
     return COMPETENCIES.filter((item) => {
       if (activeTrack === 'ops') {
@@ -33,19 +33,15 @@ export default function Home() {
           item.category === 'operations' ||
           item.category === 'clients' ||
           item.category === 'strategy' ||
+          item.id === 'multi-agent-ops'
+        );
+      }
+      if (activeTrack === 'apps') {
+        return (
+          item.category === 'product' ||
           item.id === 'sports-coaching-system' ||
           item.id === 'seo-diagnostic-tool' ||
           item.id === 'prod-toolstack-tracker'
-        );
-      }
-      if (activeTrack === 'author') {
-        return (
-          item.id === 'blurbsmith' ||
-          item.id === 'prod-ideation-app' ||
-          item.id === 'prod-voice-guide' ||
-          item.id === 'prod-mindmap-app' ||
-          item.id === 'prod-video-mockup' ||
-          item.id === 'prompt-character-system'
         );
       }
       return true;
@@ -55,27 +51,27 @@ export default function Home() {
   const accordionItems = [
     {
       num: '01',
-      title: 'AI OPERATIONS STRATEGY & WORKFLOWS',
-      desc: 'Orchestrating n8n, Make, and GoHighLevel pipeline architectures to eliminate manual friction, automate lead intake, and restructure enterprise CRMs.',
-      items: ['Multi-Agent Operations Architecture', 'Automated Lead-to-Booking Pipeline', 'CRM Taxonomy & Tag Restructuring'],
+      title: 'SHOSOCCER & ENTERPRISE BUSINESS PLATFORMS',
+      desc: 'Engineering multi-venue operations systems, coach dispatch engines, PWA attendance check-in frameworks, automated parent subscription billing, and executive dashboards.',
+      items: ['ShoSoccer Sports Coaching Management System (780+ Members)', 'Multi-Venue Coach Dispatch & Billing Engine', 'Mobile PWA Attendance Check-In with Offline Sync'],
     },
     {
       num: '02',
-      title: 'ENTERPRISE SYSTEM ARCHITECTURE',
-      desc: 'Engineering multi-venue operations systems, PWA check-in frameworks, technical build briefs, and standard operating procedures (SOPs).',
-      items: ['Enterprise Sports Coaching & Operations Platform', 'Technical Build Briefs & Specs', 'SOP Documentation Hub'],
+      title: 'AI OPERATIONS STRATEGY & WORKFLOWS',
+      desc: 'Orchestrating n8n, Make, and GoHighLevel pipeline architectures to eliminate manual friction, automate lead intake, and restructure enterprise CRMs.',
+      items: ['Multi-Agent Operations Architecture', 'Automated Sub-5-Second Lead Pipeline', 'CRM Taxonomy & Tag Restructuring'],
     },
     {
       num: '03',
-      title: 'DIGITAL TOOLS FOR AUTHORS & WRITERS',
-      desc: 'Building intelligent SaaS tools, AI blurb engines, writing plotters, and manuscript style analyzers under the Writing with Melissa hub.',
-      items: ['BlurbSmith: AI Book Blurb Generator', 'Story Starter: Creative Ideation Web App', 'Manuscript Style Guide Engine'],
+      title: 'DIAGNOSTIC ENGINES & AUDIT SALES TOOLS',
+      desc: 'Designing automated audit engines, diagnostic web tools, PDF report generators, and consultative sales frameworks that prove ROI before contract signing.',
+      items: ['Sports Coaching Efficiency Diagnostic Tool', 'OneToolAway Tool Stack Tracker', 'Gated Audit & PDF Generator'],
     },
     {
       num: '04',
-      title: 'PROMPT ENGINEERING & DIAGNOSTIC ENGINES',
-      desc: 'Designing structured system prompts, zero-shot JSON schemas, diagnostic scoring rubrics, and multimodal character bibles.',
-      items: ['Sports Coaching Efficiency Diagnostic Tool', 'Diagnostic System Prompts', 'Character Development Framework'],
+      title: 'TECHNICAL SPECS & PROMPT ARCHITECTURE',
+      desc: 'Designing structured system prompts, zero-shot JSON schemas, technical build briefs, and standard operating procedures (SOPs).',
+      items: ['Diagnostic JSON System Prompts', 'Technical Build Briefs & API Schemas', 'SOP Documentation Hub'],
     },
   ];
 
@@ -85,7 +81,7 @@ export default function Home() {
       <header className="relative w-full bg-[#FF3B00] text-white pt-8 pb-12 px-4 sm:px-8 lg:px-12 overflow-hidden border-b border-[#FF3B00]">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-bold uppercase tracking-wider mb-8 border-b border-white/20 pb-4">
           <a href="https://taniavorster.com" className="hover:opacity-80 transition-opacity">Tania Vorster</a>
-          <span className="hidden sm:inline">AI Operations Strategist & Digital Tools Architecture</span>
+          <span className="hidden sm:inline">AI Operations Strategist & Business Systems Architect</span>
           <a
             href="https://taniavorster.com/contact/"
             target="_blank"
@@ -109,10 +105,10 @@ export default function Home() {
 
             <div className="lg:col-span-4 bg-black/90 p-6 sm:p-8 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-md">
               <p className="font-serif text-xl sm:text-2xl italic leading-snug text-[#FF3B00] mb-3">
-                AI Operations Strategist & Systems Architect
+                AI Operations Strategist & Business Systems Architect
               </p>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-                Designing operational frameworks, enterprise workflows, and specialized digital tools across B2B operations and author creative systems.
+                Designing operational frameworks, enterprise workflows, and specialized business web apps—headlined by the flagship ShoSoccer Sports Coaching System.
               </p>
               <div className="mt-6">
                 <a
@@ -129,7 +125,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── 2. DUAL TRACK FILTER BAR ──────────────────────────────── */}
+      {/* ── 2. BUSINESS FILTER BAR ────────────────────────────────── */}
       <section className="py-8 bg-[#141414] border-b border-white/10 sticky top-0 z-30 backdrop-blur-md bg-opacity-95">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#FF3B00]">
@@ -146,7 +142,19 @@ export default function Home() {
                   : 'bg-black text-slate-300 hover:bg-white/10 border border-white/10'
               }`}
             >
-              All Competencies ({COMPETENCIES.length})
+              All Business Systems ({COMPETENCIES.length})
+            </button>
+
+            <button
+              onClick={() => setActiveTrack('apps')}
+              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 ${
+                activeTrack === 'apps'
+                  ? 'bg-[#FF3B00] text-white shadow-lg'
+                  : 'bg-black text-slate-300 hover:bg-white/10 border border-white/10'
+              }`}
+            >
+              <Cpu className="w-3.5 h-3.5" />
+              <span>Business Apps & Platforms</span>
             </button>
 
             <button
@@ -160,18 +168,6 @@ export default function Home() {
               <Workflow className="w-3.5 h-3.5" />
               <span>AI Operations Strategy</span>
             </button>
-
-            <button
-              onClick={() => setActiveTrack('author')}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 ${
-                activeTrack === 'author'
-                  ? 'bg-[#FF3B00] text-white shadow-lg'
-                  : 'bg-black text-slate-300 hover:bg-white/10 border border-white/10'
-              }`}
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Digital Tools for Authors</span>
-            </button>
           </div>
         </div>
       </section>
@@ -182,10 +178,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-8 space-y-6">
               <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold uppercase leading-[1.05] tracking-tight">
-                CRAFTING <span className="text-[#FF3B00] italic">SYSTEMS</span> THAT CONNECT PEOPLE
+                CRAFTING <span className="text-[#FF3B00] italic">BUSINESS SYSTEMS</span> THAT SCALE
               </h2>
               <p className="text-base sm:text-xl text-slate-300 font-sans leading-relaxed max-w-2xl">
-                Most growing organizations don't have a growth problem—they have a chaos problem. I design and build the operational systems, multi-agent frameworks, and digital tools that fix it.
+                Most growing businesses don't have a growth problem—they have a chaos problem. I design and build the operational systems, multi-agent frameworks, and specialized business web applications that eliminate speed-to-lead latency and streamline multi-venue execution.
               </p>
             </div>
 
@@ -195,14 +191,14 @@ export default function Home() {
                   <div className="w-full h-28 bg-[#FF3B00] rounded mb-3 flex items-center justify-center text-white">
                     <Workflow className="w-10 h-10" />
                   </div>
-                  <span className="font-mono text-[11px] font-bold uppercase block text-center">AI Operations</span>
+                  <span className="font-mono text-[11px] font-bold uppercase block text-center">ShoSoccer System</span>
                 </div>
 
                 <div className="p-4 bg-white text-black rounded-lg shadow-xl transform rotate-3 hover:rotate-0 transition-transform border border-slate-200">
                   <div className="w-full h-28 bg-[#141414] rounded mb-3 flex items-center justify-center text-[#FF3B00]">
                     <Cpu className="w-10 h-10" />
                   </div>
-                  <span className="font-mono text-[11px] font-bold uppercase block text-center">Digital Tools</span>
+                  <span className="font-mono text-[11px] font-bold uppercase block text-center">Business Apps</span>
                 </div>
               </div>
             </div>
@@ -210,20 +206,20 @@ export default function Home() {
 
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-white/10">
             <div>
-              <span className="font-serif text-4xl sm:text-5xl font-black text-[#FF3B00] block">25+</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">Years Experience</span>
+              <span className="font-serif text-4xl sm:text-5xl font-black text-[#FF3B00] block">780+</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">Members Managed (ShoSoccer)</span>
+            </div>
+            <div>
+              <span className="font-serif text-4xl sm:text-5xl font-black text-white block">25+</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">Years Cross-Sector</span>
             </div>
             <div>
               <span className="font-serif text-4xl sm:text-5xl font-black text-white block">20+</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">Verifiable Proofs</span>
-            </div>
-            <div>
-              <span className="font-serif text-4xl sm:text-5xl font-black text-white block">2</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">Dedicated Tracks</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">System Proofs</span>
             </div>
             <div>
               <span className="font-serif text-4xl sm:text-5xl font-black text-[#FF3B00] block">100%</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">Execution-Focused</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">B2B Focused</span>
             </div>
           </div>
         </div>
@@ -237,7 +233,7 @@ export default function Home() {
               // Frameworks & Architecture
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl font-bold uppercase tracking-tight">
-              DESIGN EXPERTISE TO TRANSFORM IDEAS INTO DIGITAL TOOLS
+              OPERATIONAL EXPERTISE & BUSINESS SYSTEM ARCHITECTURE
             </h2>
           </div>
 
@@ -301,10 +297,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <span className="text-xs font-mono uppercase tracking-widest text-[#FF3B00] block mb-2">
-                // Flagship Digital Tools
+                // Flagship Business Web Apps
               </span>
               <h2 className="font-serif text-3xl sm:text-5xl font-extrabold uppercase tracking-tight">
-                FEATURED DIGITAL TOOLS & PLATFORMS
+                FEATURED BUSINESS APPS & PLATFORMS
               </h2>
             </div>
             <a
@@ -318,47 +314,68 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {FEATURED_PRODUCTS.map((prod) => (
-              <div
-                key={prod.id}
-                onClick={() => setSelectedCompetency(prod)}
-                className="group cursor-pointer rounded-2xl bg-[#141414] border border-white/10 hover:border-[#FF3B00] p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-              >
-                <div>
-                  <div className="w-full h-40 rounded-xl bg-gradient-to-br from-[#FF3B00]/20 via-[#141414] to-black border border-white/10 p-5 flex flex-col justify-between mb-5 relative overflow-hidden group-hover:border-[#FF3B00]/40 transition-colors">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#FF3B00] text-white w-fit">
-                      {prod.proofDetails?.badgeText || prod.proofType}
+            {FEATURED_PRODUCTS.map((prod) => {
+              const isStar = prod.id === 'sports-coaching-system';
+              return (
+                <div
+                  key={prod.id}
+                  onClick={() => setSelectedCompetency(prod)}
+                  className={`group cursor-pointer rounded-2xl bg-[#141414] p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
+                    isStar
+                      ? 'border-2 border-[#FF3B00] shadow-[0_0_30px_rgba(255,59,0,0.25)]'
+                      : 'border border-white/10 hover:border-[#FF3B00]'
+                  }`}
+                >
+                  <div>
+                    <div className={`w-full h-40 rounded-xl p-5 flex flex-col justify-between mb-5 relative overflow-hidden transition-colors ${
+                      isStar
+                        ? 'bg-gradient-to-br from-[#FF3B00] via-[#900000] to-black border border-[#FF3B00]'
+                        : 'bg-gradient-to-br from-[#FF3B00]/20 via-[#141414] to-black border border-white/10 group-hover:border-[#FF3B00]/40'
+                    }`}>
+                      <div className="flex items-center justify-between">
+                        <span className={`text-[10px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${
+                          isStar ? 'bg-white text-black font-extrabold' : 'bg-[#FF3B00] text-white'
+                        }`}>
+                          {prod.proofDetails?.badgeText || prod.proofType}
+                        </span>
+                        {isStar && <Star className="w-5 h-5 text-white fill-white" />}
+                      </div>
+                      {isStar && (
+                        <div className="text-white text-xs font-mono font-bold">
+                          780+ Active Members Managed
+                        </div>
+                      )}
+                    </div>
+
+                    <h4 className="font-serif text-xl font-bold text-white group-hover:text-[#FF3B00] transition-colors">
+                      {prod.title}
+                    </h4>
+
+                    <p className="mt-2 text-xs text-slate-300 leading-relaxed line-clamp-3">
+                      {prod.description}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {prod.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/10"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-[#FF3B00] uppercase tracking-wider">
+                    <span className="flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5 text-white" /> View Specs & Proof
                     </span>
-                  </div>
-
-                  <h4 className="font-serif text-xl font-bold text-white group-hover:text-[#FF3B00] transition-colors">
-                    {prod.title}
-                  </h4>
-
-                  <p className="mt-2 text-xs text-slate-300 leading-relaxed line-clamp-3">
-                    {prod.description}
-                  </p>
-
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {prod.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/10"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
-
-                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-[#FF3B00] uppercase tracking-wider">
-                  <span className="flex items-center gap-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-white" /> View Specs
-                  </span>
-                  <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -369,14 +386,14 @@ export default function Home() {
           <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <span className="text-xs font-mono uppercase tracking-widest text-[#FF3B00] block mb-2">
-                // Filtered Competency Directory
+                // Filtered Business Directory
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold uppercase tracking-tight">
-                All Demonstrated Competencies & Digital Proofs
+                All Business Competencies & System Proofs
               </h2>
             </div>
             <span className="text-xs font-mono text-slate-400">
-              Showing {filteredCompetencies.length} items for track: <strong className="text-[#FF3B00] uppercase">{activeTrack}</strong>
+              Showing {filteredCompetencies.length} items for focus: <strong className="text-[#FF3B00] uppercase">{activeTrack}</strong>
             </span>
           </div>
 
@@ -399,7 +416,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
-                  <span>Inspect Spec</span>
+                  <span>Inspect System Spec</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#FF3B00]" />
                 </div>
               </div>
@@ -431,7 +448,7 @@ export default function Home() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-white/20 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono uppercase tracking-wider text-black/90 gap-4">
-          <span>Tania Vorster • AI Operations Strategist</span>
+          <span>Tania Vorster • AI Operations Strategist & Business Systems Architect</span>
           <span>© {new Date().getFullYear()} Tania Vorster. All rights reserved.</span>
         </div>
       </footer>
