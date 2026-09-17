@@ -18,11 +18,21 @@ const config: Config = {
           grey: '#666666',
           offwhite: '#FAF8FB',
           border: '#E2D9E6',
+        },
+        crimson: {
+          500: '#FF3B00',
+          600: '#E03400',
+        },
+        dark: {
+          900: '#0B0B0B',
+          800: '#141414',
+          700: '#1A1A1A',
         }
       },
       fontFamily: {
         heading: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       boxShadow: {
