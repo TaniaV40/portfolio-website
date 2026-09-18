@@ -18,6 +18,8 @@ import {
   CheckCircle2,
   SlidersHorizontal,
   Star,
+  Clock,
+  Globe,
 } from 'lucide-react';
 
 export default function Home() {
@@ -78,8 +80,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#0B0B0B] text-white font-sans antialiased overflow-x-hidden">
       {/* ── 1. TOP HEADER BRAND BANNER ────────────────────────────── */}
-      <header className="relative w-full bg-[#FF3B00] text-white pt-8 pb-12 px-4 sm:px-8 lg:px-12 overflow-hidden border-b border-[#FF3B00]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-bold uppercase tracking-wider mb-8 border-b border-white/20 pb-4">
+      <header className="relative w-full bg-[#FF3B00] text-white pt-8 pb-0 px-4 sm:px-8 lg:px-12 overflow-hidden border-b border-[#FF3B00]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 border-b border-white/20 pb-4 relative z-20">
           <a href="https://taniavorster.com" className="hover:opacity-80 transition-opacity">Tania Vorster</a>
           <span className="hidden sm:inline">AI Operations Strategist & Systems Architect</span>
           <a
@@ -92,16 +94,21 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7">
-              <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-black bg-white/90 px-3 py-1 rounded-full mb-4 inline-block shadow-sm">
-                AI Operations Strategist & Systems Architect
-              </span>
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-4">
+        <div className="max-w-7xl mx-auto relative min-h-[480px] flex flex-col justify-between">
+          {/* Watermark Title TANIA */}
+          <div className="absolute -top-6 left-0 font-serif text-[110px] sm:text-[180px] lg:text-[240px] font-black uppercase tracking-tight leading-[0.85] text-white/95 select-none pointer-events-none z-0">
+            TANIA
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end relative z-10 pt-8 pb-0">
+            <div className="lg:col-span-7 pb-12">
+              <div className="font-mono text-xs font-bold uppercase tracking-widest text-white/90 mb-3">
+                AI OPERATIONS STRATEGY & SYSTEMS ARCHITECT
+              </div>
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-4">
                 Your business shouldn’t feel this hard to run.
               </h1>
-              <p className="text-base sm:text-xl text-white/95 leading-relaxed font-sans max-w-xl">
+              <p className="text-base sm:text-lg text-white/95 leading-relaxed font-sans max-w-xl">
                 Most growing businesses don’t have a growth problem. They have a chaos problem. I design and build the systems that fix it.
               </p>
               <div className="mt-8">
@@ -116,20 +123,46 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative">
-              <div className="rounded-2xl overflow-hidden border-2 border-white/30 shadow-2xl bg-black">
-                <img
-                  src="/images/tania_hero.jpg"
-                  alt="Tania Vorster - AI Operations Strategist & Systems Architect"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            {/* Grounded Clean Portrait Image */}
+            <div className="lg:col-span-5 flex justify-end items-end h-full">
+              <img
+                src="/images/tania_portrait_clean.png"
+                alt="Tania Vorster"
+                className="max-h-[500px] w-auto object-contain object-bottom block mb-0"
+              />
             </div>
           </div>
         </div>
       </header>
 
-      {/* ── 2. BUSINESS FILTER BAR ────────────────────────────────── */}
+      {/* ── 2. CREDIBILITY TRUST BANNER ─────────────────────────── */}
+      <section className="bg-[#FF3B00] text-white py-9 border-t border-b border-white/20 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
+            <div className="flex flex-col items-center text-center px-4 lg:border-r border-white/30">
+              <Clock className="w-7 h-7 mb-3 text-white" />
+              <p className="text-sm font-medium leading-snug">25 years in Business operations</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center px-4 lg:border-r border-white/30">
+              <Star className="w-7 h-7 mb-3 text-white" />
+              <p className="text-sm font-medium leading-snug">5-star reviews from founders who’ve tried everything else first</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center px-4 lg:border-r border-white/30">
+              <Globe className="w-7 h-7 mb-3 text-white" />
+              <p className="text-sm font-medium leading-snug">Clients across Europe and the USA</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center px-4">
+              <Cpu className="w-7 h-7 mb-3 text-white" />
+              <p className="text-sm font-medium leading-snug">AI, automation & Operations specialist, building systems, not just advising on them</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. BUSINESS FILTER BAR ────────────────────────────────── */}
       <section className="py-8 bg-[#141414] border-b border-white/10 sticky top-0 z-30 backdrop-blur-md bg-opacity-95">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#FF3B00]">
@@ -176,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 3. CRAFTING SYSTEMS THAT CONNECT PEOPLE ───────────────── */}
+      {/* ── 4. CRAFTING SYSTEMS THAT CONNECT PEOPLE ───────────────── */}
       <section className="py-20 lg:py-28 px-4 sm:px-8 lg:px-12 bg-[#0B0B0B] border-b border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -229,7 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. NUMBERED EXPERTISE ACCORDION (01, 02, 03, 04) ──────── */}
+      {/* ── 5. NUMBERED EXPERTISE ACCORDION (01, 02, 03, 04) ──────── */}
       <section className="py-20 px-4 sm:px-8 lg:px-12 bg-[#121212] border-b border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
@@ -295,7 +328,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. SPOTLIGHT SHOWCASE ─────────────────────────────────── */}
+      {/* ── 6. SPOTLIGHT SHOWCASE ─────────────────────────────────── */}
       <section className="py-20 lg:py-28 px-4 sm:px-8 lg:px-12 bg-[#0B0B0B] border-b border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -351,7 +384,7 @@ export default function Home() {
                       )}
                     </div>
 
-                    <h4 className="font-serif text-xl font-bold text-white group-hover:text-[#FF3B00] transition-colors">
+                    <h4 className="font-serif text-[#FF3B00] text-xl font-bold transition-colors">
                       {prod.title}
                     </h4>
 
@@ -384,7 +417,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 6. COMPETENCY MATRIX DIRECTORY ────────────────────────── */}
+      {/* ── 7. COMPETENCY MATRIX DIRECTORY ────────────────────────── */}
       <section className="py-20 px-4 sm:px-8 lg:px-12 bg-[#121212] border-b border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -429,7 +462,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 7. EDITORIAL FOOTER ───────────────────────────────────── */}
+      {/* ── 8. EDITORIAL FOOTER ───────────────────────────────────── */}
       <footer className="py-24 px-4 sm:px-8 lg:px-12 bg-[#FF3B00] text-white text-center relative overflow-hidden">
         <div className="max-w-5xl mx-auto space-y-8 relative z-10">
           <span className="text-xs font-mono uppercase tracking-widest text-black font-bold block">
