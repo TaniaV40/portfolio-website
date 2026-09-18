@@ -81,7 +81,7 @@ export default function Home() {
       <header className="relative w-full bg-[#FF3B00] text-white pt-8 pb-12 px-4 sm:px-8 lg:px-12 overflow-hidden border-b border-[#FF3B00]">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-bold uppercase tracking-wider mb-8 border-b border-white/20 pb-4">
           <a href="https://taniavorster.com" className="hover:opacity-80 transition-opacity">Tania Vorster</a>
-          <span className="hidden sm:inline">AI Operations Strategist & Business Systems Architect</span>
+          <span className="hidden sm:inline">AI Operations Strategist & Systems Architect</span>
           <a
             href="https://taniavorster.com/contact/"
             target="_blank"
@@ -93,32 +93,36 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div className="lg:col-span-8">
-              <h1 className="font-serif text-6xl sm:text-8xl lg:text-[140px] font-black uppercase tracking-tight leading-none text-white drop-shadow-md">
-                TANIA
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7">
+              <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-black bg-white/90 px-3 py-1 rounded-full mb-4 inline-block shadow-sm">
+                AI Operations Strategist & Systems Architect
+              </span>
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-4">
+                Your business shouldn’t feel this hard to run.
               </h1>
-              <h1 className="font-serif text-5xl sm:text-7xl lg:text-[110px] font-black uppercase tracking-tight leading-none text-black/90">
-                VORSTER
-              </h1>
-            </div>
-
-            <div className="lg:col-span-4 bg-black/90 p-6 sm:p-8 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-md">
-              <p className="font-serif text-xl sm:text-2xl italic leading-snug text-[#FF3B00] mb-3">
-                AI Operations Strategist & Business Systems Architect
+              <p className="text-base sm:text-xl text-white/95 leading-relaxed font-sans max-w-xl">
+                Most growing businesses don’t have a growth problem. They have a chaos problem. I design and build the systems that fix it.
               </p>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-                Designing operational frameworks, enterprise workflows, and specialized business web apps—headlined by the flagship ShoSoccer Sports Coaching System.
-              </p>
-              <div className="mt-6">
+              <div className="mt-8">
                 <a
                   href="https://taniavorster.com/contact/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FF3B00] hover:bg-white hover:text-black font-bold text-xs uppercase tracking-wider text-white shadow-lg transition-all"
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-black text-white hover:bg-white hover:text-black font-mono font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xl transition-all"
                 >
-                  Start a Conversation <ArrowUpRight className="w-4 h-4" />
+                  LET'S SOLVE YOUR PROBLEM <ArrowUpRight className="w-5 h-5" />
                 </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 relative">
+              <div className="rounded-2xl overflow-hidden border-2 border-white/30 shadow-2xl bg-black">
+                <img
+                  src="/images/tania_hero.jpg"
+                  alt="Tania Vorster - AI Operations Strategist & Systems Architect"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
@@ -219,7 +223,7 @@ export default function Home() {
             </div>
             <div>
               <span className="font-serif text-4xl sm:text-5xl font-black text-[#FF3B00] block">100%</span>
-              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">B2B Focused</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 font-mono mt-1 block">B2B Business App Focus</span>
             </div>
           </div>
         </div>
