@@ -94,44 +94,22 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="max-w-7xl mx-auto relative min-h-[480px] flex flex-col justify-between">
-          {/* Watermark Title TANIA */}
-          <div className="absolute -top-6 left-0 font-serif text-[110px] sm:text-[180px] lg:text-[240px] font-black uppercase tracking-tight leading-[0.85] text-white/95 select-none pointer-events-none z-0">
-            TANIA
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end relative z-10 pt-8 pb-0">
-            <div className="lg:col-span-7 pb-12">
-              <div className="font-mono text-xs font-bold uppercase tracking-widest text-white/90 mb-3">
-                AI OPERATIONS STRATEGY & SYSTEMS ARCHITECT
-              </div>
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-4">
-                Your business shouldn’t feel this hard to run.
-              </h1>
-              <p className="text-base sm:text-lg text-white/95 leading-relaxed font-sans max-w-xl">
-                Most growing businesses don’t have a growth problem. They have a chaos problem. I design and build the systems that fix it.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="https://taniavorster.com/contact/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-black text-white hover:bg-white hover:text-black font-mono font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xl transition-all"
-                >
-                  LET'S SOLVE YOUR PROBLEM <ArrowUpRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-
-            {/* Grounded Clean Portrait Image */}
-            <div className="lg:col-span-5 flex justify-end items-end h-full">
-              <img
-                src="/images/tania_portrait_clean.png"
-                alt="Tania Vorster"
-                className="max-h-[500px] w-auto object-contain object-bottom block mb-0"
-              />
-            </div>
-          </div>
+        {/* Hero Magazine Banner Image Showcase */}
+        <div className="max-w-7xl mx-auto relative rounded-t-2xl overflow-hidden leading-none border-t border-x border-white/20">
+          <img
+            src="/images/tania_hero_full.png"
+            alt="Tania Vorster - AI Operations Strategist & Systems Architect. Your business shouldn't feel this hard to run. Most growing businesses don't have a growth problem. They have a chaos problem. I design and build the systems that fix it."
+            className="w-full h-auto object-cover block mb-0"
+          />
+          <a
+            href="https://taniavorster.com/contact/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute left-[4.2%] bottom-[9.5%] w-[22%] h-[9.5%] rounded-full bg-transparent hover:bg-white/15 transition-all z-10"
+            title="Let's Solve Your Problem"
+          >
+            <span className="sr-only">Let's Solve Your Problem</span>
+          </a>
         </div>
       </header>
 
