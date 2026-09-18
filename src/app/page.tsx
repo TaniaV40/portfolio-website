@@ -79,9 +79,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#0B0B0B] text-white font-sans antialiased overflow-x-hidden">
-      {/* ── 1. TOP HEADER BRAND BANNER (PURE CRIMSON HERO - NO IMAGE) ─ */}
-      <header className="relative w-full bg-[#FF3B00] text-white pt-8 pb-20 px-4 sm:px-8 lg:px-12 overflow-hidden border-b border-[#FF3B00]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-bold uppercase tracking-wider mb-10 border-b border-white/20 pb-4 relative z-20">
+      {/* ── 1. TOP HEADER BRAND BANNER (CRIMSON LAYERED CUTOUT HERO) ── */}
+      <header className="relative w-full bg-[#FF3B00] text-white pt-8 pb-0 px-4 sm:px-8 lg:px-12 overflow-hidden border-b border-[#FF3B00]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 border-b border-white/20 pb-4 relative z-20">
           <a href="https://taniavorster.com" className="hover:opacity-80 transition-opacity">Tania Vorster</a>
           <span className="hidden sm:inline">AI Operations Strategist & Systems Architect</span>
           <a
@@ -94,31 +94,43 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="max-w-7xl mx-auto relative min-h-[380px] flex flex-col justify-center">
-          {/* Giant Watermark Title TANIA */}
-          <div className="absolute -top-10 -right-6 font-serif text-[120px] sm:text-[220px] lg:text-[300px] font-black uppercase tracking-tight leading-[0.8] text-white/95 select-none pointer-events-none z-0">
-            TANIA
-          </div>
-
-          <div className="relative z-10 max-w-3xl pt-4">
-            <div className="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-white/95 mb-4">
-              AI OPERATIONS STRATEGY & SYSTEMS ARCHITECT
+        <div className="max-w-7xl mx-auto relative min-h-[500px] flex flex-col justify-between">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end relative z-10 pt-4 pb-0 flex-grow">
+            {/* Left Content Block */}
+            <div className="lg:col-span-7 pb-12 pt-6">
+              <div className="font-mono text-xs font-bold uppercase tracking-widest text-white/95 mb-3">
+                AI OPERATIONS STRATEGY & SYSTEMS ARCHITECT
+              </div>
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-4">
+                Your business shouldn’t feel this hard to run.
+              </h1>
+              <p className="text-base sm:text-lg text-white/95 leading-relaxed font-sans max-w-xl">
+                Most growing businesses don’t have a growth problem. They have a chaos problem. I design and build the systems that fix it.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="https://taniavorster.com/contact/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-black text-white hover:bg-white hover:text-black font-mono font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xl transition-all"
+                >
+                  LET'S SOLVE YOUR PROBLEM <ArrowUpRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6">
-              Your business shouldn’t feel this hard to run.
-            </h1>
-            <p className="text-base sm:text-xl text-white/95 leading-relaxed font-sans max-w-2xl">
-              Most growing businesses don’t have a growth problem. They have a chaos problem. I design and build the systems that fix it.
-            </p>
-            <div className="mt-8">
-              <a
-                href="https://taniavorster.com/contact/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-black text-white hover:bg-white hover:text-black font-mono font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xl transition-all"
-              >
-                LET'S SOLVE YOUR PROBLEM <ArrowUpRight className="w-5 h-5" />
-              </a>
+
+            {/* Grounded Transparent PNG Cutout with TA / NIA framing head */}
+            <div className="lg:col-span-5 flex justify-center items-end h-full relative z-10 min-h-[460px] w-full">
+              {/* Giant Watermark TANIA framing head */}
+              <div className="absolute top-2 -left-4 -right-4 flex justify-between font-serif text-[100px] sm:text-[140px] lg:text-[180px] font-black uppercase tracking-tight leading-none text-white/95 select-none pointer-events-none z-0">
+                <span>TA</span>
+                <span>NIA</span>
+              </div>
+              <img
+                src="/images/tania_cutout.png"
+                alt="Tania Vorster"
+                className="max-h-[510px] w-auto object-contain object-bottom block mb-0 relative z-10"
+              />
             </div>
           </div>
         </div>
